@@ -1,0 +1,10 @@
+<div ng-controller="SensorListCtrl">
+<div ng-repeat="sensor in sensors">
+    <P>Sensor Name: {{sensor.key}}</p>
+    <p>Sensor Id: {{sensor.id}}</p>
+    <p>Description: {{sensor.description}}</p>
+    <p>Date Created: {{sensor.created_at}}</p>
+    <!--p>{{sensor.readings}}</p--!>
+</div>
+<nvd3 options="options" data="data" api="api"></nvd3>
+</div>

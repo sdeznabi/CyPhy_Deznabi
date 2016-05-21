@@ -1,0 +1,12 @@
+
+curl -i -X POST -H "Content-Type:application/json" http://localhost:5000/api/v1/users -d '{"email":"test@test.com", "password":"letmein"}'
+
+curl -i -X POST -H "Content-Type:application/json" http://localhost:5000/api/v1/sessions -d '{"email":"test@test.com", "password":"letmein"}'
+
+curl -v --insecure --anyauth --user test@test.com:letmein  -X POST -H "Content-Type:application/json" http://localhost:5000/api/v1/sensors -d '{"name":"temperature-sensor", "description":"freezer temperature sensor"}'
+
+curl --user test@test.com:letmein -H "Accept:application/json" http://localhost:5000/api/v1/sensors/1
+
+curl --user test@test.com:letmein -H "Accept:application/json" http://localhost:5000/api/v1/sensors
+
+curl -v --insecure --anyauth --user test@test.com:letmein  -X POST -H "Content-Type:application/json" http://localhost:5000/api/v1/readings -d '{"value":"25.0", "sensor_id":"1"}'

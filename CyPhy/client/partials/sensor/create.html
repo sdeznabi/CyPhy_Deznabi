@@ -1,0 +1,19 @@
+<div ng-controller="SensorCreateCtrl">
+	<center>
+        <form name="sensorCreateForm">
+			<div class="input-group">
+			  
+                <input type="text" class="form-control" ng-model="sensor.name" placeholder="Enter Name" ng-form="sensorCreateForm" aria-describedby="sizing-addon2" required>
+			</div>
+
+			<div class="input-group">
+			  
+                <textarea class="form-control" ng-model="sensor.description" placeholder="Enter the sensor description" aria-describedby="sizing-addon2" required> </textarea>
+			  
+			</div>
+            <button n class="btn btn-primary" ng-click="submit(1, sensor)">Create Sensor</button>
+		</form>
+
+	</center>
+
+</div>
